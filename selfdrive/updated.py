@@ -357,7 +357,7 @@ def main():
       params.put("LastUpdateException", f"command failed: {exception.cmd}\n{exception.output}")
 
     # Wait 10 minutes between update attempts
-    wait_helper.sleep(10)  # trigger an update 5
+    wait_helper.sleep(10)  # trigger an update 6
 
   dismount_ovfs()
 
