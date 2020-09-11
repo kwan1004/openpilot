@@ -297,7 +297,7 @@ def main():
 
   # Wait for IsOffroad to be set before our first update attempt
   wait_helper = WaitTimeHelper(proc)
-  wait_helper.sleep(30)
+  wait_helper.sleep(10)
 
   update_failed_count = 0
   update_available = False
@@ -357,7 +357,7 @@ def main():
       params.put("LastUpdateException", f"command failed: {exception.cmd}\n{exception.output}")
 
     # Wait 10 minutes between update attempts
-    wait_helper.sleep(60*10)
+    wait_helper.sleep(10)
 
   dismount_ovfs()
 
