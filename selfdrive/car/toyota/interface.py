@@ -37,7 +37,8 @@ class CarInterface(CarInterfaceBase):
 
       ret.lateralTuning.init('indi')
       ret.lateralTuning.indi.innerLoopGain = 4.0
-      ret.lateralTuning.indi.outerLoopGain = 3.0
+      ret.lateralTuning.indi.outerLoopGainBP = [0, 20, 21]  # note that you generally want it to interp over larger differences. this will QUICKLY
+      ret.lateralTuning.indi.outerLoopGainV = [6, 6, 15]  # ramp up from 6 to 15 in 1 m/s. not ideal. should be something like 0, 10, 30 m/s for BP
       ret.lateralTuning.indi.timeConstant = 1.0
       ret.lateralTuning.indi.actuatorEffectiveness = 1.0
       ret.steerActuatorDelay = 0.5
